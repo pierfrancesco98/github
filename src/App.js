@@ -6,8 +6,8 @@ import Footer from './Components/Footer';
 
 function App() {
   const [searchUrl, setSearchUrl] = useState(null);
-  const [userUrl, setUserUrl] = useState(`https://api.github.com/users/g`);
-  const [reposUrl, setReposUrl] = useState(`https://api.github.com/users/g/repos`);
+  const [userUrl, setUserUrl] = useState(`https://api.github.com/users/github`);
+  const [reposUrl, setReposUrl] = useState(`https://api.github.com/users/github/repos`);
 
 
 const { data: searchData } = useFetch(searchUrl);
