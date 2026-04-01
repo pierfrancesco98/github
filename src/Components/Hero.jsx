@@ -12,7 +12,7 @@ console.log(query);
 setSearchUrl(`https://api.github.com/search/users?q=${query}`);
 };
 
-const handeChangeUrl = (e) => {
+const handleChangeUrl = (e) => {
   const username = e.currentTarget.dataset.target;
   console.log(username);
   setUserUrl(`https://api.github.com/users/${username}`);
@@ -24,7 +24,7 @@ const handeChangeUrl = (e) => {
 
   return (
     <header>
-        <div className="dropdown-from">
+        <div className="dropdown-form">
  <form onSubmit={handleSearch}>
         <i><img src={icon} alt="icon-search" /></i>
         <input type="text" placeholder='username'  onChange={(e) => setQuery(e.target.value)}/>
@@ -32,7 +32,7 @@ const handeChangeUrl = (e) => {
        <div className={`content-form ${showDropdown ? 'active' : ''}`}>
         {
     data?.items?.map(user => (
-    <div className="flex" key={user.id} data-target={user.login} onClick={handeChangeUrl}>
+    <div className="flex" key={user.id} data-target={user.login} onClick={handleChangeUrl}>
     <img src={user.avatar_url} alt={user.login} />
     <div className="form-user-details">
     <h3>{user.login}</h3>
