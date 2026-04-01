@@ -1,5 +1,5 @@
 import React from 'react'
-import nasting from '../resources/Nesting.svg';
+import nesting from '../resources/Nesting.svg';
 import star from '../resources/Star.svg';
 import useTimeAgo  from '../Hooks/useTimeAgo';
 
@@ -18,7 +18,7 @@ function Card({visibleRepos}) {
     <p>{repo.description}</p>
 
     <div className="repo-info">
-      <span><img src={nasting} alt="..." /> {repo.forks}</span>
+      <span><img src={nesting} alt="..." /> {repo.forks}</span>
       <span><img src={star} alt="..." /> {repo.stargazers_count}</span>
       <span>{timeAgo(repo.updated_at)}</span>
     </div>
