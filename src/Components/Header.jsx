@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import icon from '../resources/Search.svg';
 
-function Hero({data, setSearchUrl,  setUserUrl, setReposUrl }) {
+function Header({data, setSearchUrl,  setUserUrl, setReposUrl }) {
 const [query, setQuery] = useState('');
 const showDropdown = query.length > 0 && data?.items?.length > 0;
 
@@ -46,4 +46,4 @@ const handleChangeUrl = (e) => {
   )
 };
 
-export default Hero;
+export default Header;
