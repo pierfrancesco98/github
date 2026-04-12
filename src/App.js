@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import useFetch from './Hooks/useFetch';
-import Hero from './Components/Hero';
+import Header from './Components/Header';
 import Content from './Components/Content';
 import Footer from './Components/Footer';
 
@@ -20,7 +20,7 @@ console.log(searchData);
   console.log(reposData)
   return (
     <>
-     <Hero 
+     <Header
       data={searchData} 
       setSearchUrl={setSearchUrl} 
       setUserUrl={setUserUrl}
